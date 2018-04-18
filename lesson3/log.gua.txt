@@ -1,0 +1,36 @@
+22:06:28 path,  H:/project/lesson3/templates/
+22:06:28 <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jinja demo 1</title>
+</head>
+<body>
+    <!-- 变量替换 -->
+    <h1>gua</h1>
+
+    <!-- 循环 -->
+    
+        <span class="number">0</span>
+    
+        <span class="number">1</span>
+    
+        <span class="number">2</span>
+    
+
+    <!-- 循环加对象/字典访问 -->
+    <div class="user-container">
+    
+        <div class="user-cell">
+            <span>gua</span>
+            <span>1</span>
+        </div>
+    
+        <div class="user-cell">
+            <span>瓜</span>
+            <span>2</span>
+        </div>
+    
+    </div>
+</body>
+</html>
