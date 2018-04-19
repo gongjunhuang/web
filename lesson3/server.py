@@ -1,12 +1,12 @@
 import socket
 import urllib.parse
 
+from routes.routes_simpletodo import route_dict as simpletodo_routes
+from routes.routes_static import route_static
+from routes.routes_user import route_dict as user_routes
+
+from routes.routes_todo import route_dict as todo_routes
 from utils import log
-
-from routes_static import route_static
-
-from routes_simpletodo import route_dict as simpletodo_routes
-from routes_user import route_dict as user_routes
 
 
 # 定义一个 class 用于保存请求的数据
@@ -47,6 +47,7 @@ class Request(object):
         body = urllib.parse.unquote(self.body)
         args = body.split('&')
         f = {}
+        log('form debug', args, len(args))
         for arg in args:
             k, v = arg.split('=')
             f[k] = v
@@ -106,6 +107,8 @@ def response_for_path(path):
     # 注册外部的路由
     r.update(simpletodo_routes)
     r.update(user_routes)
+    r.update(todo_routes)
+    #
     response = r.get(path, error)
     return response(request)
 
@@ -124,7 +127,7 @@ def run(host='', port=3000):
             # 监听 接受 读取请求数据 解码成字符串
             s.listen(3)
             connection, address = s.accept()
-            r = connection.recv(1000)
+            r = connection.recv(1100)
             r = r.decode('utf-8')
             log('完整请求')
             log(r.replace('\r\n', '\n'))
