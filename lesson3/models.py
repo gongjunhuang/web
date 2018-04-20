@@ -164,10 +164,36 @@ class User(Model):
         self.username = form.get('username', '')
         self.password = form.get('password', '')
 
+    def salted_password(self, password, salt='$!@><?>HUI&DWQa`'):
+        """$!@><?>HUI&DWQa`"""
+        import hashlib
+        def sha256(ascii_str):
+            return hashlib.sha256(ascii_str.encode('ascii')).hexdigest()
+        hash1 = sha256(password)
+        hash2 = sha256(hash1 + salt)
+        return hash2
+
+    def hashed_password(self, pwd):
+        import hashlib
+        # 用 ascii 编码转换成 bytes 对象
+        p = pwd.encode('ascii')
+        s = hashlib.sha256(p)
+        # 返回摘要字符串
+        return s.hexdigest()
+
+    def validate_register(self):
+        pwd = self.password
+        self.password = self.salted_password(pwd)
+        if User.find_by(username=self.username) is None:
+            self.save()
+            return self
+        else:
+            return None
+
     def validate_login(self):
         u = User.find_by(username=self.username)
         if u is not None:
-            return u.password == self.password
+            return u.password == self.salted_password(self.password)
         else:
             return False
 
@@ -240,15 +266,18 @@ class Todo(Model):
 
 
 # 微博类
-class Tweet(Model):
+class Weibo(Model):
     def __init__(self, form, user_id=-1):
         self.id = form.get('id', None)
         self.content = form.get('content', '')
+        # self.c
         # 和别的数据关联的方式, 用 user_id 表明拥有它的 user 实例
         self.user_id = form.get('user_id', user_id)
 
     def comments(self):
-        return [c for c in Comment.all() if c.tweet_id == self.id]
+        # return [c for c in Comment.all() if c.weibo_id == self.id]
+        return Comment.find_all(weibo_id=self.id)
+
 
 # 评论类
 class Comment(Model):
@@ -257,7 +286,12 @@ class Comment(Model):
         self.content = form.get('content', '')
         # 和别的数据关联的方式, 用 user_id 表明拥有它的 user 实例
         self.user_id = form.get('user_id', user_id)
-        self.tweet_id = form.get('tweet_id', -1)
+        self.weibo_id = int(form.get('weibo_id', -1))
+
+    def user(self):
+        u = User.find_by(id=self.user_id)
+        return u
+
 
 def test_tweet():
     # 用户 1 发微博

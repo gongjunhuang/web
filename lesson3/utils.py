@@ -3,6 +3,7 @@ import os.path
 import time
 
 
+
 def log(*args, **kwargs):
     # time.time() 返回 unix time
     # 如何把 unix time 转换为普通人类可以看懂的格式呢？
@@ -38,17 +39,29 @@ def response_with_headers(headers, status_code=200):
     return header
 
 
-def redirect(location, headers=None):
-    h = {
+def redirect(location):
+    headers = {
         'Content-Type': 'text/html',
     }
-    if headers is not None:
-        h.update(headers)
-    h['Location'] = location
+    headers['Location'] = location
+    # 301 永久重定向 302 普通定向
     # 302 状态码的含义, Location 的作用
-    header = response_with_headers(h, 302)
+    header = response_with_headers(headers, 302)
     r = header + '\r\n' + ''
     return r.encode(encoding='utf-8')
+
+
+def error(request, code=404):
+    """
+    根据 code 返回不同的错误响应
+    目前只有 404
+    """
+    # 之前上课我说过不要用数字来作为字典的 key
+    # 但是在 HTTP 协议中 code 都是数字似乎更方便所以打破了这个原则
+    e = {
+        404: b'HTTP/1.x 404 NOT FOUND\r\n\r\n<h1>NOT FOUND</h1>',
+    }
+    return e.get(code, b'')
 
 
 def http_response(body, headers=None):
