@@ -1,7 +1,3 @@
-作者：ZakeXu
-链接：https://www.nowcoder.com/discuss/15168
-来源：牛客网
-
 1 ）几种模型（ svm ， lr ， gbdt ， em ）的原理以及公式推导；
 
 2 ） rf ， gbdt 的区别； gbdt ， xgboost 的区别（烂大街的问题最好从底层原理去分析回答）；
