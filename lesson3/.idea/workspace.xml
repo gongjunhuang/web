@@ -11,6 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/lesson3$server.coverage" NAME="server Coverage Results" MODIFIED="1523711236525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lesson3$sqlite_demo.coverage" NAME="sqlite_demo Coverage Results" MODIFIED="1524581886127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lesson3$snake.coverage" NAME="snake Coverage Results" MODIFIED="1523711124063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates" />
     <SUITE FILE_PATH="coverage/lesson3$Us_spider.coverage" NAME="Us_spider Coverage Results" MODIFIED="1523797834713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lesson3$jinja_demo.coverage" NAME="jinja_demo Coverage Results" MODIFIED="1523973987286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -79,18 +80,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sqlite_demo.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sqlite_demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqlite_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3325">
-              <caret line="175" column="3" lean-forward="false" selection-start-line="175" selection-start-column="3" selection-end-line="175" selection-end-column="3" />
+            <state relative-caret-position="-83">
+              <caret line="146" column="30" lean-forward="true" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
               <folding>
-                <marker date="1524580963219" expanded="true" signature="933:1114" ph="CREATE TABLE... users" />
-                <marker date="1524580963219" expanded="true" signature="1270:1349" ph="INSERT INTO users" />
-                <marker date="1524580963219" expanded="true" signature="1819:1926" ph="SELECT id, u... users" />
-                <marker date="1524580963219" expanded="true" signature="2131:2179" ph="DELETE FROM " />
-                <marker date="1524580963219" expanded="true" signature="2468:2541" ph="UPDATE `user... " />
-                <marker date="1524580963219" expanded="true" signature="3129:3290" ph="CREATE TABLE... users" />
+                <marker date="1524581875709" expanded="true" signature="933:1114" ph="CREATE TABLE... users" />
+                <marker date="1524581875709" expanded="true" signature="1270:1349" ph="INSERT INTO users" />
+                <marker date="1524581875709" expanded="true" signature="1819:1926" ph="SELECT id, u... users" />
+                <marker date="1524581875709" expanded="true" signature="2131:2179" ph="DELETE FROM " />
+                <marker date="1524581875709" expanded="true" signature="2468:2541" ph="UPDATE `user... " />
+                <marker date="1524581875709" expanded="true" signature="3127:3288" ph="CREATE TABLE... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongo_demo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mongo_demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-684">
+              <caret line="78" column="16" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+              <folding>
+                <element signature="e#99#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,6 +139,7 @@
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/routes/__init__.py" />
         <option value="$PROJECT_DIR$/sqlite_demo.py" />
+        <option value="$PROJECT_DIR$/mongo_demo.py" />
       </list>
     </option>
   </component>
@@ -136,8 +150,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
-    <option name="y" value="6" />
+    <option name="x" value="300" />
+    <option name="y" value="16" />
     <option name="width" value="1346" />
     <option name="height" value="745" />
   </component>
@@ -208,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.jinja_demo">
+  <component name="RunManager" selected="Python.sqlite_demo">
     <configuration name="Us_spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -281,18 +295,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="4">
+    <configuration name="sqlite_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lesson3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqlite_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.snake" />
       <item index="1" class="java.lang.String" itemvalue="Python.server" />
       <item index="2" class="java.lang.String" itemvalue="Python.Us_spider" />
       <item index="3" class="java.lang.String" itemvalue="Python.jinja_demo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sqlite_demo" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.jinja_demo" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Us_spider" />
-        <item index="2" class="java.lang.String" itemvalue="Python.server" />
-        <item index="3" class="java.lang.String" itemvalue="Python.snake" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.sqlite_demo" />
+        <item index="1" class="java.lang.String" itemvalue="Python.jinja_demo" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Us_spider" />
+        <item index="3" class="java.lang.String" itemvalue="Python.server" />
+        <item index="4" class="java.lang.String" itemvalue="Python.snake" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +344,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="6" width="1346" height="745" extended-state="0" />
+    <frame x="300" y="16" width="1346" height="745" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1706767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -319,7 +353,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2800633" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2800633" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -347,16 +381,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1406">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3211">
@@ -747,15 +771,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqlite_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3325">
-          <caret line="175" column="3" lean-forward="false" selection-start-line="175" selection-start-column="3" selection-end-line="175" selection-end-column="3" />
+        <state relative-caret-position="-83">
+          <caret line="146" column="30" lean-forward="true" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
           <folding>
-            <marker date="1524580963219" expanded="true" signature="933:1114" ph="CREATE TABLE... users" />
-            <marker date="1524580963219" expanded="true" signature="1270:1349" ph="INSERT INTO users" />
-            <marker date="1524580963219" expanded="true" signature="1819:1926" ph="SELECT id, u... users" />
-            <marker date="1524580963219" expanded="true" signature="2131:2179" ph="DELETE FROM " />
-            <marker date="1524580963219" expanded="true" signature="2468:2541" ph="UPDATE `user... " />
-            <marker date="1524580963219" expanded="true" signature="3129:3290" ph="CREATE TABLE... users" />
+            <marker date="1524581875709" expanded="true" signature="933:1114" ph="CREATE TABLE... users" />
+            <marker date="1524581875709" expanded="true" signature="1270:1349" ph="INSERT INTO users" />
+            <marker date="1524581875709" expanded="true" signature="1819:1926" ph="SELECT id, u... users" />
+            <marker date="1524581875709" expanded="true" signature="2131:2179" ph="DELETE FROM " />
+            <marker date="1524581875709" expanded="true" signature="2468:2541" ph="UPDATE `user... " />
+            <marker date="1524581875709" expanded="true" signature="3127:3288" ph="CREATE TABLE... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="78" column="16" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding>
+            <element signature="e#99#113#0" expanded="true" />
           </folding>
         </state>
       </provider>

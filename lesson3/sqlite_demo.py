@@ -145,7 +145,7 @@ def main():
     conn = sqlite3.connect(db_path)
     print("打开了数据库")
     # 打开数据库后 就可以用 create 函数创建表
-    # create(conn)
+    create(conn)
     # 然后可以用 insert 函数插入数据
     # insert(conn, 'sql4', '1234', 'a@b.c')
     # 可以用 delete 函数删除数据
