@@ -70,6 +70,11 @@ def update(request):
     Todo.update(todo_id, form)
     return redirect('/')
 
+def api_all(request):
+    body = request.body
+    log('前端发送的原始数据', body)
+    return 'OK'.encode('utf-8')
+
 
 route_dict = {
     '/': index,
@@ -77,4 +82,5 @@ route_dict = {
     '/delete': delete,
     '/edit': edit,
     '/update': update,
+    '/api/todo/all': api_all,
 }
